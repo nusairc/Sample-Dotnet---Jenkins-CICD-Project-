@@ -16,6 +16,14 @@ pipeline {
             }
         }
 
+        stage('Unit Test') {
+            steps {
+                dir('./Example Hello World Apps/C#/MyApp') {
+                    sh 'dotnet test'
+                }
+            }
+        
+
         // Add additional stages for unit tests, code analysis, etc.
     }
 }
