@@ -24,16 +24,16 @@ pipeline {
             }
         }
 
-        stage('Code Analysis') {
-            steps {
-                withSonarQubeEnv('SonarCloud') {
-                    // Run SonarCloud analysis
-                    sh 'dotnet sonarscanner begin /k:"nusairc_lhd-helloworld" /d:sonar.login="3197b75fc357e4836d96cf32e9a21610e89a79ec"'
-                    sh 'dotnet build'
-                    sh 'dotnet sonarscanner end /d:sonar.login="3197b75fc357e4836d96cf32e9a21610e89a79ec"'
-                }
-            }
-        }
+        // stage('Code Analysis') {
+        //     steps {
+        //         withSonarQubeEnv('SonarCloud') {
+        //             // Run SonarCloud analysis
+        //             sh 'dotnet sonarscanner begin /k:"nusairc_lhd-helloworld" /d:sonar.login="3197b75fc357e4836d96cf32e9a21610e89a79ec"'
+        //             sh 'dotnet build'
+        //             sh 'dotnet sonarscanner end /d:sonar.login="3197b75fc357e4836d96cf32e9a21610e89a79ec"'
+        //         }
+        //     }
+        // }
         
 
         // Add additional stages for unit tests, code analysis, etc.
