@@ -24,15 +24,7 @@ pipeline {
             }
         }
 
-//                 stage('SonarCloud Analysis') {
-//     steps {
-//         sh 'sonar-scanner \
-//             -Dsonar.organization=nusairc \
-//             -Dsonar.projectKey=nusairc_lhd-helloworld \
-//             -Dsonar.sources=. \
-//             -Dsonar.host.url=https://sonarcloud.io'
-//     }
-// }
+
         stage('Code Analysis') {
             steps {
                 withSonarQubeEnv('SonarCloud') {
@@ -49,6 +41,16 @@ pipeline {
     }
 }
 
+
+//                 stage('SonarCloud Analysis') {
+//     steps {
+//         sh 'sonar-scanner \
+//             -Dsonar.organization=nusairc \
+//             -Dsonar.projectKey=nusairc_lhd-helloworld \
+//             -Dsonar.sources=. \
+//             -Dsonar.host.url=https://sonarcloud.io'
+//     }
+// }
 
 
 
