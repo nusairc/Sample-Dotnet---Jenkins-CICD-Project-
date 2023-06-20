@@ -24,16 +24,25 @@ pipeline {
             }
         }
 
-        stage('Code Analysis') {
-            steps {
-                withSonarQubeEnv('SonarCloud') {
-                    // Run SonarCloud analysis
-                    sh 'dotnet sonarscanner begin /k:"nusairc_lhd-helloworld" /d:sonar.login="3197b75fc357e4836d96cf32e9a21610e89a79ec"'
-                    sh 'dotnet build'
-                    sh 'dotnet sonarscanner end /d:sonar.login="3197b75fc357e4836d96cf32e9a21610e89a79ec"'
-                }
-            }
-        }
+                stage('SonarCloud Analysis') {
+    steps {
+        sh 'sonar-scanner \
+            -Dsonar.organization=nusairc \
+            -Dsonar.projectKey=nusairc_lhd-helloworld \
+            -Dsonar.sources=. \
+            -Dsonar.host.url=https://sonarcloud.io'
+    }
+}
+        // stage('Code Analysis') {
+        //     steps {
+        //         withSonarQubeEnv('SonarCloud') {
+        //             // Run SonarCloud analysis
+        //             sh 'dotnet sonarscanner begin /k:"nusairc_lhd-helloworld" /d:sonar.login="3197b75fc357e4836d96cf32e9a21610e89a79ec"'
+        //             sh 'dotnet build'
+        //             sh 'dotnet sonarscanner end /d:sonar.login="3197b75fc357e4836d96cf32e9a21610e89a79ec"'
+        //         }
+        //     }
+        // }
         
 
         
@@ -78,15 +87,15 @@ pipeline {
 //         //     }
 //         // }
 
-// //         stage('SonarCloud Analysis') {
-// //     steps {
-// //         sh 'sonar-scanner \
-// //             -Dsonar.organization=nusairc \
-// //             -Dsonar.projectKey=nusairc_lhd-helloworld \
-// //             -Dsonar.sources=. \
-// //             -Dsonar.host.url=https://sonarcloud.io'
-// //     }
-// // }
+//         stage('SonarCloud Analysis') {
+//     steps {
+//         sh 'sonar-scanner \
+//             -Dsonar.organization=nusairc \
+//             -Dsonar.projectKey=nusairc_lhd-helloworld \
+//             -Dsonar.sources=. \
+//             -Dsonar.host.url=https://sonarcloud.io'
+//     }
+// }
         
 //         // sampletrigger
 
