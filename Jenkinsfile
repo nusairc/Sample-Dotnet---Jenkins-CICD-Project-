@@ -28,9 +28,9 @@ pipeline {
             steps {
                 withSonarQubeEnv('SonarCloud') {
                     // Run SonarCloud analysis
-                    sh 'dotnet sonarscanner begin /k:"nusairc_lhd-helloworld" /d:sonar.login="27df43c466529cd9ce1d758590af8cbc1c556624"'
+                    sh 'dotnet sonarscanner begin /k:"nusairc_lhd-helloworld" /d:sonar.login="3197b75fc357e4836d96cf32e9a21610e89a79ec"'
                     sh 'dotnet build'
-                    sh 'dotnet sonarscanner end /d:sonar.login="27df43c466529cd9ce1d758590af8cbc1c556624"'
+                    sh 'dotnet sonarscanner end /d:sonar.login="3197b75fc357e4836d96cf32e9a21610e89a79ec"'
                 }
             }
         }
