@@ -22,6 +22,7 @@ pipeline {
                     sh 'dotnet test'
                 }
             }
+        }
         
 
         // Add additional stages for unit tests, code analysis, etc.
