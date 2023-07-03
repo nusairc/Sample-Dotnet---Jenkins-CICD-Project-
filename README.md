@@ -1,13 +1,24 @@
  This Repo is created for Learning Purpose , this contains a jenkins file and sample C# code .
-# its created for Learning CI/CD & Code Quality using Jenkins. the Jenkins pipeline script (Jenkins pipeline job [not freestyle job]) perform the following activities: [git checkout, dotnet build, unit test, code analysis].
+# its created for Learning CI/CD & Code Quality using Jenkins.
+# the Jenkins pipeline script (Jenkins pipeline job [not freestyle job]) perform the following activities: [git checkout, dotnet build, unit test, code analysis].
  
 prerequisite : 
-- Install Jenkins in AWS EC2 Instance
+-  Have basic understanding of CI/CD , Quality gate etc.
+- Install Jenkins in AWS EC2 Instance (you will be charged for EC2 in aws based on usage if you dont have free tier acount)
 - Create an account in SonarCloud or Install SonarQube. Configure Quality Gate.
 - Configure web-hook in Github to auto-trigger jenkins job when new code is pushed into the repository
 
+- To get started with the CI/CD and Code Quality learning, follow these steps:
 
-This repo also contains various **Hello, World** tutorials that participants from the **Hello, World in a New Language** sessions at [MLH Local Hack Day](https://lhd.mlh.io) tried and contributed.
+    - Set up an AWS EC2 instance and install Jenkins on it.
+    - Create an account on SonarCloud or install SonarQube for code analysis.
+    - Configure the necessary credentials and plugins in Jenkins.
+    - Create a Jenkins pipeline job and configure it to use the Jenkinsfile provided in this repository.
+    - Set up a webhook in your GitHub repository to trigger the Jenkins job automatically when new code is pushed. go to github settings and add webhook - give your jenkins    URl there , refer more resources for better understanding
+    - Explore the pipeline stages and observe the CI/CD process and code analysis in action.
+
+
+# This repo also contains various **Hello, World** tutorials , which covers basics of Languages.
 
 If you would like to contribute links of any such tutorials, please **fork** this repository, and add them to the table below in the format specified.
 
