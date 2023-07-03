@@ -1,6 +1,13 @@
-# Hello, World in a New Language - MLH Local Hack Day
+ This Repo is created for Learning Purpose , this contains a jenkins file and sample C# code .
+# its created for Learning CI/CD & Code Quality using Jenkins. the Jenkins pipeline script (Jenkins pipeline job [not freestyle job]) perform the following activities: [git checkout, dotnet build, unit test, code analysis].
+ 
+prerequisite : 
+- Install Jenkins in AWS EC2 Instance
+- Create an account in SonarCloud or Install SonarQube. Configure Quality Gate.
+- Configure web-hook in Github to auto-trigger jenkins job when new code is pushed into the repository
 
-This repo contains various **Hello, World** tutorials that participants from the **Hello, World in a New Language** sessions at [MLH Local Hack Day](https://lhd.mlh.io) tried and contributed.
+
+This repo also contains various **Hello, World** tutorials that participants from the **Hello, World in a New Language** sessions at [MLH Local Hack Day](https://lhd.mlh.io) tried and contributed.
 
 If you would like to contribute links of any such tutorials, please **fork** this repository, and add them to the table below in the format specified.
 
@@ -38,5 +45,4 @@ If you would like to contribute links of any such tutorials, please **fork** thi
 
 ---
 
-*Note: The* `Example Hello World Apps/` *folder contains* **Hello World apps** *created in the sessions at MLH Local Hack Day: Build 2020 and MLH Local Hack Day: Share 2021. Please do not edit that.*
 
