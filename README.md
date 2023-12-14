@@ -1,4 +1,4 @@
- This Repo is created for Learning Purpose 
+This Repo is created for Learning Purpose 
 # Its created for Learning CI/CD & Code Quality using Jenkins.
 # repo contains the jenkins file and sample C# code .
 # the Jenkins pipeline script (Jenkins pipeline job [not freestyle job]) perform the following activities: [git checkout, dotnet build, unit test, code analysis].
